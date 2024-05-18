@@ -108,6 +108,7 @@ ul li {
   gap: 3rem;
 }
 
+
 .container-mid {
   display: flex;
   flex-direction: column;
@@ -246,7 +247,8 @@ ul li {
     flex-direction: column-reverse;
   }
 
-  .container-mid{
+  .container-mid {
+    text-align: center;
     margin: 4rem;
     padding-top: 3rem;
     border-radius: 1rem;
@@ -265,4 +267,19 @@ ul li {
   gap: 1rem;
   scale: 2;
   align-items: center;
+}
+
+/* animations */
+.hidden{
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(8px);
+  transform: translateY(100px);
+}
+
+.show{
+  opacity: 1;
+  filter: blur(0px);
+  margin: 0;
+  transform: translateY(0px);
 }
