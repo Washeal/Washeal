@@ -6,7 +6,7 @@ function changeImage() {
   images[currentImage].classList.remove("active"); // Deactivate current image
   currentImage = (currentImage + 1) % images.length; // Get next image index
   images[currentImage].classList.add("active"); // Activate next image
-  setTimeout(changeImage, 3000); // Call changeImage again after 3 seconds
+  setTimeout(changeImage, 3000); 
 }
 
-changeImage(); // Start the image transition
+changeImage();
