@@ -7,6 +7,10 @@
   font-style: normal;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -271,15 +275,13 @@ ul li {
 
 /* animations */
 .hidden{
-  /* opacity: 0; */
-  transition: all 1s;
-  filter: blur(20px);
-  transform: translateY(60px);
+  opacity: 0;
+  transition: all 1.5s;
+  filter: blur(5px);
 }
 
 .show{
   opacity: 1;
   filter: blur(0px);
   margin: 0;
-  transform: translateY(0px);
 }
