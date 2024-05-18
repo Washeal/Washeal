@@ -17,8 +17,8 @@ body {
     rgb(66, 41, 7)
   );
 }
-.body-c{
-  text-align: center; 
+.body-c {
+  text-align: center;
 }
 
 .hero-h1 {
@@ -129,7 +129,7 @@ ul li {
   padding-top: 1rem;
 }
 .pro-body {
-  background-image: linear-gradient(to right, rgb(19, 19, 19),rgb(174, 0, 0));
+  background-image: linear-gradient(to right, rgb(19, 19, 19), rgb(174, 0, 0));
   display: flex;
   flex-direction: column;
   /* background-color: rgb(255, 114, 232); */
@@ -219,14 +219,10 @@ ul li {
   }
 }
 
-
-.icons{
+.icons {
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
   scale: 2;
   align-items: center;
-}
-
-.icon{
 }
