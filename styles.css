@@ -5,10 +5,9 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  overflow-x: hidden;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -112,7 +111,6 @@ ul li {
   align-items: center;
   gap: 3rem;
 }
-
 
 .container-mid {
   display: flex;
@@ -275,14 +273,14 @@ ul li {
 }
 
 /* animations */
-.hidden{
+.hidden {
   /* opacity: 0; */
   transition: all 1s;
-  scale:1.4;
+  scale: 0.5;
   opacity: 0.5;
 }
 
-.show{
+.show {
   opacity: 1;
   margin: 0;
   scale: 1;
