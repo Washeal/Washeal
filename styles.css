@@ -5,6 +5,10 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  a {
+text-decoration: none;
+color: white;
+  }
 }
 
 body {
@@ -161,7 +165,7 @@ ul li {
   width: 100%;
   height: fit-content;
   background-color: rgb(136, 0, 0);
-  padding: 5rem;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
