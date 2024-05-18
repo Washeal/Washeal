@@ -1,6 +1,10 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Bitter", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
@@ -12,6 +16,9 @@ body {
     rgb(0, 0, 0),
     rgb(66, 41, 7)
   );
+}
+.body-c{
+  text-align: center; 
 }
 
 .hero-h1 {
@@ -111,11 +118,25 @@ ul li {
 }
 
 .product {
-  background-color: rgb(84, 16, 12);
+  background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(1, 1, 1));
   border-radius: 2rem;
-  height: 30rem;
+  height: 32rem;
+  width: 20rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+}
+.pro-body {
+  background-image: linear-gradient(to right, rgb(19, 19, 19),rgb(174, 0, 0));
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgb(255, 114, 232); */
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 1rem 1rem;
+  text-align: center;
   justify-content: center;
   align-items: center;
 }
@@ -194,6 +215,18 @@ ul li {
   }
 
   .about {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
+}
+
+
+.icons{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  scale: 2;
+  align-items: center;
+}
+
+.icon{
 }
