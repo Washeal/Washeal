@@ -41,5 +41,5 @@ nav.addEventListener("click", function () {
 close_nav.addEventListener("click", function () {
   mob_nav.classList.remove("mob-nav-show");
   mob_nav.classList.add("mob-nav");
-  document.body.style.overflow = "none";
+  document.body.style.overflow = "";
 });
