@@ -27,15 +27,17 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElement = document.querySelectorAll(".hidden");
 hiddenElement.forEach((el) => observer.observe(el));
 
+// Mobile Navbar
 const nav = document.getElementById("nav");
-const close_nav = document.getElementById("close-nav");
 const mob_nav = document.getElementsByClassName("mob-nav")[0]; // Access the first element
+const close_nav = document.getElementById("close-nav");
 
 nav.addEventListener("click", function () {
   mob_nav.classList.add("mob-nav-show");
   mob_nav.classList.remove("mob-nav");
   document.body.style.overflow = "hidden";
 });
+
 close_nav.addEventListener("click", function () {
   mob_nav.classList.remove("mob-nav-show");
   mob_nav.classList.add("mob-nav");
