@@ -29,25 +29,22 @@ hiddenElement.forEach((el) => observer.observe(el));
 
 // Mobile Navbar
 const nav = document.getElementById("nav");
-const mob_nav = document.getElementsByClassName("mob-nav")[0]; // Access the first element
+const mob_nav = document.querySelector(".mob-nav") // Access the first element
 const nav_links = document.querySelector(".nav-mob-link");
 const close_nav = document.getElementById("close-nav");
 
 nav.addEventListener("click", function () {
   mob_nav.classList.add("mob-nav-show");
-  // mob_nav.classList.remove("mob-nav");
   document.body.style.overflow = "hidden";
 });
 
 close_nav.addEventListener("click", function () {
   mob_nav.classList.remove("mob-nav-show");
-  // mob_nav.classList.add("mob-nav");
   document.body.style.overflow = "";
 });
 
 nav_links.addEventListener("click", function () {
   mob_nav.classList.remove("mob-nav-show");
-
   document.body.style.overflow = "";
 });
 
@@ -80,4 +77,6 @@ btn_mob.addEventListener("click", function () {
     btn_mob.style.color = "black";
     console.log("light");
   }
+  mob_nav.classList.remove("mob-nav-show");
+  document.body.style.overflow = "";
 });
