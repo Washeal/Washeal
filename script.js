@@ -45,8 +45,39 @@ close_nav.addEventListener("click", function () {
   document.body.style.overflow = "";
 });
 
-nav_links.addEventListener("click", function() {
+nav_links.addEventListener("click", function () {
   mob_nav.classList.remove("mob-nav-show");
-  
+
   document.body.style.overflow = "";
-})
+});
+
+let btn = document.getElementById("theme");
+let btn_mob = document.getElementById("theme-mob");
+
+btn.addEventListener("click", function () {
+  const body = document.body;
+  btn.style.transform = btn.style.transform ? "" : "rotate(180deg)";
+  if (body.getAttribute("data-theme") === "light") {
+    body.setAttribute("data-theme", "dark");
+    btn.style.color = "white";
+    console.log("dark");
+  } else {
+    body.setAttribute("data-theme", "light");
+    btn.style.color = "black";
+    console.log("light");
+  }
+});
+
+btn_mob.addEventListener("click", function () {
+  const body = document.body;
+  btn_mob.style.transform = btn_mob.style.transform ? "" : "rotate(180deg)";
+  if (body.getAttribute("data-theme") === "light") {
+    body.setAttribute("data-theme", "dark");
+    btn_mob.style.color = "white";
+    console.log("dark");
+  } else {
+    body.setAttribute("data-theme", "light");
+    btn_mob.style.color = "black";
+    console.log("light");
+  }
+});

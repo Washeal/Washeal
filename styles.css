@@ -1,3 +1,23 @@
+body[data-theme="light"] {
+  --text: #0d0f11;
+  --background: #f3f6f7;
+  --secondary: #ff0000;
+  --bg1: rgb(255, 213, 213);
+  --bg2: rgb(255, 234, 204);
+  --c1: rgb(255, 164, 164);
+  --sec: rgb(255, 219, 219);
+}
+
+body[data-theme="dark"] {
+  --text: #eef0f2;
+  --background: #080b0c;
+  --secondary: #ff0000;
+  --bg1: rgb(39, 9, 9);
+  --bg2: rgb(66, 41, 7);
+  --c1: rgb(95, 0, 0);
+  --sec: rgb(140, 0, 0);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,20 +33,19 @@ html {
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--text);
 }
 
 body {
-  background-color: black;
-  color: white;
+  color: var(--text);
   background-image: linear-gradient(
     to right,
-    rgb(39, 9, 9),
-    rgb(0, 0, 0),
-    rgb(66, 41, 7)
+    var(--bg1),
+    var(--background),
+    var(--bg2)
   );
   /* background-color: white; */
-  overflow-x: hidden;
+  overflow-x:hidden;
 }
 
 .body-c {
@@ -109,7 +128,8 @@ ul li {
 .products {
   flex-wrap: wrap;
   height: fit-content;
-  margin-bottom: 4rem;
+  /* margin-bottom: 4rem; */
+  /* overflow-x:initial; */
 }
 
 .container-left,
@@ -143,20 +163,33 @@ ul li {
   justify-content: space-evenly;
   width: 100%;
   gap: 3rem;
+  /* padding: 5rem; */
 }
 
 .product {
-  background-image: radial-gradient(rgb(0, 0, 0), rgb(26, 0, 0));
+  background-image: radial-gradient(var(--background), var(--bg1));
   border-radius: 2rem;
-  height: 32rem;
-  width: 20rem;
+  height: 35rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 1rem;
 }
-.pro-body {
+
+::-webkit-scrollbar {
+  width: 0.3rem;
+  height: 0px;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
+}
+​ .pro-body {
   background-image: linear-gradient(
     to right,
     rgb(60, 0, 0),
@@ -165,7 +198,6 @@ ul li {
   );
   display: flex;
   flex-direction: column;
-  /* background-color: rgb(255, 114, 232); */
   width: 100%;
   height: 100%;
   border-radius: 0 0 1rem 1rem;
@@ -193,12 +225,7 @@ ul li {
 .inner {
   width: 100%;
   height: fit-content;
-  background-image: linear-gradient(
-    to right,
-    rgb(95, 0, 0),
-    rgb(140, 0, 0),
-    rgb(95, 0, 0)
-  );
+  background-image: radial-gradient( var(--sec),var(--c1));
 
   padding: 3rem;
   display: flex;
@@ -227,7 +254,7 @@ ul li {
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background-color: rgb(0, 0, 0);
+  background-color: var(--background);
   /* animation: slidein ease-in 1s; */
 }
 
@@ -246,7 +273,7 @@ ul li {
   left: 0;
   background-color: transparent;
   border: none;
-  color: rgb(213, 0, 0);
+  color: var(--secondary);
   margin: 2rem;
   transform: scale(
     2
@@ -265,7 +292,9 @@ ul li {
 
 .nav-mob-link ul li a {
   text-decoration: none; /* Remove underline from links */
-  color: #fff; /* Set link color to white for contrast against the background */
+  color: var(
+    --text
+  ); /* Set link color to white for contrast against the background */
   font-size: 18px; /* Set font size */
   padding: 10px 20px; /* Add padding for clickable area */
   transition: color 0.3s; /* Smooth transition for hover effect */
@@ -280,7 +309,7 @@ ul li {
     display: inherit;
     background-color: transparent;
     border: none;
-    color: white;
+    color: var(--text);
     scale: 1.7;
   }
 
@@ -332,9 +361,9 @@ ul li {
     border-radius: 1rem;
     background-image: linear-gradient(
       to right,
-      rgb(95, 0, 0),
-      rgb(140, 0, 0),
-      rgb(95, 0, 0)
+var(--c1), 
+var(--sec), 
+var(--c1)
     );
   }
 }
